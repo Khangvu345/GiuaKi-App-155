@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingBottom="12dp">
+    <Space android:layout_width="1dp" android:layout_height="14dp" />
+    <LinearLayout style="@style/Card">
+        <TextView style="@style/Section" android:text="@string/check_availability" />
+        <Space android:layout_width="1dp" android:layout_height="10dp" />
+        <TextView android:id="@+id/filterDate" style="@style/Picker" tools:text="20/11/2026" android:drawableStart="@drawable/ic_calendar" />
+        <Space android:layout_width="1dp" android:layout_height="8dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <TextView android:id="@+id/filterTime" style="@style/Picker" tools:text="18:00" android:layout_width="0dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:drawableStart="@drawable/ic_clock" />
+            <TextView android:id="@+id/filterHours" style="@style/Picker" tools:text="2 giờ" android:layout_width="0dp" android:layout_weight="1" android:layout_marginStart="4dp" />
+        </LinearLayout>
+        <TextView style="@style/Subtitle" android:text="@string/status_hint" android:layout_marginTop="8dp" android:textSize="11sp" />
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="16dp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView style="@style/Section" android:text="@string/pitch_list" android:layout_width="0dp" android:layout_weight="1" />
+        <TextView android:id="@+id/tvPitchCount" style="@style/Subtitle" tools:text="3 sân" />
+    </LinearLayout>
+</LinearLayout>

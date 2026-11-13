@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/background">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingStart="4dp" android:paddingEnd="16dp" android:paddingTop="8dp" android:paddingBottom="16dp" android:gravity="center_vertical">
+        <ImageButton android:id="@+id/btnBack" android:layout_width="48dp" android:layout_height="48dp" android:background="?android:attr/selectableItemBackgroundBorderless" android:src="@drawable/ic_back" android:contentDescription="@string/back" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1">
+            <TextView style="@style/Title" android:text="@string/booking_title" />
+            <TextView style="@style/Subtitle" android:text="@string/booking_subtitle" />
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true" android:clipToPadding="false">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingBottom="12dp">
+            <LinearLayout android:id="@+id/btnSelectPitch" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="96dp" android:orientation="horizontal" android:gravity="center_vertical" android:background="@drawable/bg_green" android:padding="14dp" android:clickable="true" android:focusable="true" android:contentDescription="@string/choose_pitch_hint">
+                <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_pitch_white" android:contentDescription="@null" android:importantForAccessibility="no" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_marginStart="12dp">
+                    <TextView style="@style/TextBase" android:text="@string/choose_pitch" android:textColor="@color/white" android:textSize="11sp" />
+                    <TextView android:id="@+id/tvSelectedPitch" style="@style/Section" android:text="@string/choose_pitch_hint" tools:text="SB001 · Sân Mini 01" android:textColor="@color/white" android:layout_marginTop="4dp" />
+                    <TextView android:id="@+id/tvSelectedPrice" style="@style/TextBase" tools:text="300.000 đ / giờ" android:textColor="@color/white" android:layout_marginTop="4dp" />
+                </LinearLayout>
+                <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_chevron_white" android:contentDescription="@null" android:importantForAccessibility="no" />
+            </LinearLayout>
+            <Space android:layout_width="1dp" android:layout_height="16dp" />
+            <TextView style="@style/Label" android:text="@string/name_label" android:labelFor="@id/etCustomer" />
+            <EditText android:id="@+id/etCustomer" style="@style/Field" android:inputType="textPersonName" android:hint="@string/name_hint" android:maxLength="100" tools:text="Nguyễn Minh Anh" />
+            <Space android:layout_width="1dp" android:layout_height="14dp" />
+            <TextView style="@style/Label" android:text="@string/phone_label" android:labelFor="@id/etPhone" />
+            <EditText android:id="@+id/etPhone" style="@style/Field" android:inputType="phone" android:hint="@string/phone_hint" android:maxLength="20" tools:text="0912 345 678" />
+            <Space android:layout_width="1dp" android:layout_height="14dp" />
+            <TextView style="@style/Label" android:text="@string/date_label" android:labelFor="@id/btnDate" />
+            <TextView android:id="@+id/btnDate" style="@style/Picker" tools:text="20/11/2026" android:drawableEnd="@drawable/ic_calendar" />
+            <Space android:layout_width="1dp" android:layout_height="14dp" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginEnd="6dp">
+                    <TextView style="@style/Label" android:text="@string/time_label" android:labelFor="@id/btnTime" />
+                    <TextView android:id="@+id/btnTime" style="@style/Picker" tools:text="18:00" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="6dp">
+                    <TextView style="@style/Label" android:text="@string/hours_label" android:labelFor="@id/btnHours" />
+                    <TextView android:id="@+id/btnHours" style="@style/Picker" tools:text="2 giờ" />
+                </LinearLayout>
+            </LinearLayout>
+            <Space android:layout_width="1dp" android:layout_height="14dp" />
+            <TextView android:id="@+id/tvAvailability" style="@style/TextBase" android:text="@string/select_schedule" tools:text="Khung giờ còn trống" android:layout_width="match_parent" android:padding="12dp" android:background="@drawable/bg_green_soft" android:textColor="@color/green_dark" android:textStyle="bold" />
+            <Space android:layout_width="1dp" android:layout_height="14dp" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:background="@drawable/bg_green_soft">
+                <TextView style="@style/TextBase" android:text="@string/total" />
+                <TextView android:id="@+id/tvTotal" style="@style/TextBase" tools:text="600.000 đ" android:textSize="26sp" android:textStyle="bold" android:textColor="@color/green_dark" android:layout_marginTop="6dp" />
+                <TextView android:id="@+id/tvCalculation" style="@style/Subtitle" tools:text="300.000 đ × 2 giờ" android:textColor="@color/green_dark" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:background="@color/background">
+        <Button android:id="@+id/btnConfirm" style="@style/PrimaryButton" android:text="@string/confirm_booking" />
+    </LinearLayout>
+</LinearLayout>

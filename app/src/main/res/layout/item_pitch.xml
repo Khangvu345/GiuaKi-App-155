@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" style="@style/Card">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:id="@+id/tvPitchCode" style="@style/Badge" tools:text="SB001" android:background="@drawable/bg_gray" android:textColor="@color/muted" />
+        <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+        <TextView android:id="@+id/tvPitchStatus" style="@style/Badge" tools:text="Còn trống" />
+    </LinearLayout>
+    <TextView android:id="@+id/tvPitchName" style="@style/Section" tools:text="Sân Mini 01" android:layout_marginTop="8dp" />
+    <TextView android:id="@+id/tvPitchAddress" style="@style/Subtitle" tools:text="12 Nguyễn Trãi, Hà Nội" android:drawableStart="@drawable/ic_pin" android:drawablePadding="4dp" android:maxLines="2" android:ellipsize="end" />
+    <TextView android:id="@+id/tvPitchPrice" style="@style/TextBase" tools:text="300.000 đ / giờ" android:textColor="@color/primary" android:textSize="18sp" android:textStyle="bold" android:layout_marginTop="8dp" />
+    <Space android:layout_width="1dp" android:layout_height="10dp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <Button android:id="@+id/btnDeletePitch" style="@style/DeleteButton" android:text="@string/delete" android:layout_width="0dp" android:layout_weight="1" android:layout_marginEnd="6dp" android:minHeight="48dp" />
+        <Button android:id="@+id/btnBookPitch" style="@style/SmallButton" android:text="@string/book" android:layout_width="0dp" android:layout_weight="1" android:layout_marginStart="6dp" />
+    </LinearLayout>
+</LinearLayout>

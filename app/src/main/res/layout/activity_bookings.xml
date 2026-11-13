@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/background">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+        <TextView style="@style/TextBase" android:text="@string/brand" android:textColor="@color/primary" android:textStyle="bold" android:textSize="12sp" />
+        <TextView style="@style/Title" android:text="@string/bookings" android:layout_marginTop="6dp" />
+        <TextView style="@style/Subtitle" android:text="@string/bookings_subtitle" />
+        <Space android:layout_width="1dp" android:layout_height="16dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/tabAll" style="@style/PrimaryButton" android:text="@string/all" android:layout_width="0dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:minHeight="48dp" />
+            <Button android:id="@+id/tabBooked" style="@style/DeleteButton" android:text="@string/booked" android:layout_width="0dp" android:layout_weight="1" android:layout_marginStart="4dp" android:layout_marginEnd="4dp" android:minHeight="48dp" />
+            <Button android:id="@+id/tabCancelled" style="@style/DeleteButton" android:text="@string/cancelled" android:layout_width="0dp" android:layout_weight="1" android:layout_marginStart="4dp" android:minHeight="48dp" />
+        </LinearLayout>
+        <Space android:layout_width="1dp" android:layout_height="16dp" />
+        <TextView android:id="@+id/tvBookingCount" style="@style/Section" tools:text="2 đơn đặt" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <ListView android:id="@+id/listBookings" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingBottom="10dp" android:clipToPadding="false" android:divider="@android:color/transparent" android:dividerHeight="12dp" android:listSelector="@android:color/transparent" tools:listitem="@layout/item_booking" />
+        <TextView android:id="@+id/emptyBookings" style="@style/TextBase" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:padding="32dp" android:text="@string/empty_bookings" android:textColor="@color/muted" android:visibility="gone" />
+    </FrameLayout>
+    <include layout="@layout/include_bottom_nav" />
+</LinearLayout>

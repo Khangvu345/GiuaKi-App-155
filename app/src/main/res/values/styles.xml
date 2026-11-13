@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <style name="TextBase">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    <style name="Title" parent="TextBase">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Subtitle" parent="TextBase">
+        <item name="android:textColor">@color/muted</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:layout_marginTop">4dp</item>
+    </style>
+    <style name="Section" parent="TextBase">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Label" parent="TextBase">
+        <item name="android:textSize">13sp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:labelFor">@null</item>
+    </style>
+    <style name="Field" parent="TextBase">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:background">@drawable/bg_input</item>
+        <item name="android:textColorHint">@color/muted</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="Picker" parent="Field">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:drawableEnd">@drawable/ic_chevron</item>
+        <item name="android:drawablePadding">6dp</item>
+    </style>
+    <style name="PrimaryButton" parent="TextBase">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/bg_button_red</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+    <style name="OutlineButton" parent="PrimaryButton">
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:background">@drawable/bg_button_outline</item>
+    </style>
+    <style name="SoftButton" parent="PrimaryButton">
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:background">@drawable/bg_red_soft</item>
+    </style>
+    <style name="DeleteButton" parent="OutlineButton">
+        <item name="android:textColor">@color/muted</item>
+        <item name="android:background">@drawable/bg_input</item>
+    </style>
+    <style name="SmallButton" parent="PrimaryButton">
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="Badge" parent="TextBase">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingStart">9dp</item>
+        <item name="android:paddingEnd">9dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:background">@drawable/bg_green_soft</item>
+        <item name="android:textColor">@color/green_dark</item>
+    </style>
+    <style name="Card">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">14dp</item>
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="NavButton" parent="TextBase">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+</resources>

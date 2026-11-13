@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" style="@style/Card">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:id="@+id/tvBookingCode" style="@style/TextBase" tools:text="#DS001" android:textColor="@color/muted" />
+        <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+        <TextView android:id="@+id/tvBookingStatus" style="@style/Badge" tools:text="Đã đặt" />
+    </LinearLayout>
+    <TextView android:id="@+id/tvCustomer" style="@style/Section" tools:text="Nguyễn Minh Anh" android:layout_marginTop="10dp" />
+    <TextView android:id="@+id/tvBookedPitch" style="@style/Subtitle" tools:text="Sân Mini 01" />
+    <TextView android:id="@+id/tvBookedDate" style="@style/Subtitle" tools:text="20/11/2026 · 18:00" android:layout_marginTop="8dp" />
+    <TextView android:id="@+id/tvBookedHours" style="@style/Subtitle" tools:text="2 giờ · Kết thúc 20:00" />
+    <TextView android:id="@+id/tvBookedTotal" style="@style/TextBase" tools:text="600.000 đ" android:textColor="@color/primary" android:textSize="20sp" android:textStyle="bold" android:layout_marginTop="10dp" />
+    <Space android:layout_width="1dp" android:layout_height="12dp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <Button android:id="@+id/btnCancel" style="@style/OutlineButton" android:text="@string/cancel_booking" android:layout_width="0dp" android:layout_weight="1" android:layout_marginEnd="6dp" android:minHeight="48dp" />
+        <Button android:id="@+id/btnDetails" style="@style/SoftButton" android:text="@string/details" android:layout_width="0dp" android:layout_weight="1" android:layout_marginStart="6dp" android:minHeight="48dp" />
+    </LinearLayout>
+</LinearLayout>
